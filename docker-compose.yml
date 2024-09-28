@@ -81,7 +81,7 @@ services:
     entrypoint: >
       /bin/bash -c "
       /opt/spark/sbin/start-master.sh && \
-      /opt/spark/sbin/start-worker.sh spark://$(hostname):7077 && \
+      /opt/spark/sbin/start-worker.sh spark://lovalhost:7077 && \
       mkdir -p /tmp/spark-events && \
       start-history-server.sh && \
       jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' && \
